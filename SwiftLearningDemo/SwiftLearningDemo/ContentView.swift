@@ -11,12 +11,18 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
             Button("初级示例") {
+                // MARK: - 测试代码
+                // 运行所有函数，展示输出结果，方便复习
                 let beginner = Beginner()
                 beginner.variableExample()
+                beginner.stringExample()
                 beginner.arrayDictionaryExample()
-                beginner.conditionalExample(70)
+                beginner.setExample()
+                print(beginner.conditionalExample(score: 85))
                 beginner.loopExample()
-                beginner.optionalExample()
+                print(beginner.functionExample(name: "Alice", age: 25))
+                beginner.optionalExample(input: "Swift")
+                beginner.optionalExample(input: nil)
             }
             
             Button("中级示例") {
