@@ -119,9 +119,14 @@ struct Beginner {
     }
     
     // MARK: - 函数与参数标签
-    // 展示外部/内部参数名，类似 OC 的 - (NSString *)methodWithName:(NSString *)name age:(NSInteger)age
+    // 展示外部/内部参数名，增强调用可读性和内部逻辑清晰性
+    // 与 OC 对比：类似 - (NSString *)methodWithName:(NSString *)name age:(NSInteger)age
+    // 好处：外部名 (name) 让调用像句子，内部名 (externalName) 适合函数逻辑
     func functionExample(name externalName: String, age: Int) -> String {
-        return "\(externalName) 今年 \(age) 岁"
+        // 外部名 name 使调用清晰：functionExample(name: "Alice", age: 25)
+        // 内部名 externalName 在函数体内更具体，避免与局部变量冲突
+        // age 无需外部名，因其语义已足够清晰
+        return "\(externalName) 今年 \(age) 岁" // 输出格式化字符串，类似 OC 的 [NSString stringWithFormat:]
     }
     
     // MARK: - 可选类型
