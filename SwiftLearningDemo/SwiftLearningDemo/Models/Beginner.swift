@@ -7,6 +7,17 @@
 
 import Foundation
 
+// MARK: - 初级部分
+// 本文件用于展示 Swift 基础语法，包含：
+// - 常量与变量
+// - 数据类型
+// - 控制流（if/for/while/switch）
+// - 函数定义与调用
+// - 可选类型与安全解包
+// - 基本数组与字典操作
+//
+// 每个知识点均附用途说明、好处及与 Objective-C 对比，便于教学
+
 struct Beginner {
     
     // MARK: - 变量和常量

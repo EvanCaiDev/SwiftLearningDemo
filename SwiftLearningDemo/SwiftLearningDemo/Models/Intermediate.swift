@@ -8,8 +8,18 @@
 import Foundation
 
 // MARK: - 中级部分
-// 本文件用于展示 Swift 高级特性，包含闭包、函数、可选链、枚举、结构体（Struct）与类（Class）、协议、扩展、defer
-// 每个知识点均有用途说明、好处及与 Objective-C 对比，便于教学
+// 本文件用于展示 Swift 中级/进阶特性，包含：
+// - 闭包（Closure）
+// - 高阶函数（map/filter/reduce/flatMap）
+// - 协议导向编程（POP）
+// - 错误处理（Error Handling）
+// - 属性（计算属性、存储属性、lazy、观察器）
+// - 内存管理（值类型 vs 引用类型、weak/unowned）
+// - 可选链（Optional Chaining）
+// - 枚举（Enum）及关联值
+// - defer 延迟执行
+//
+// 每个知识点均附用途说明、好处及与 Objective-C 对比，便于教学
 
 // 文件作用域定义协议，确保在整个文件中可见
 // 好处：协议可在多个类型间复用，类似 OC 的 @protocol
