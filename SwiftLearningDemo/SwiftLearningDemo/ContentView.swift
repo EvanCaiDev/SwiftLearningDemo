@@ -10,9 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
      // MARK: - 运行初级示例
-     // 用途: 执行 Beginner 级别的所有函数
-     // 好处: 提供交互式学习体验
-     // 与 OC 对比: OC 需手动调用 NSLog 输出
      private func runBeginnerExamples() {
          print("=== 变量和常量 ===")
          let beginner = Beginner()
@@ -51,9 +48,6 @@ struct ContentView: View {
      }
      
      // MARK: - 运行中级示例
-     // 用途: 执行 Intermediate 级别的所有函数
-     // 好处: 交互式展示中级概念
-     // 与 OC 对比: OC 需手动管理 Block 调用
      private func runIntermediateExamples() {
          print("=== 可选链 ===")
          let intermediate = Intermediate()
@@ -93,9 +87,6 @@ struct ContentView: View {
      }
     
     // MARK: - 运行高级示例
-    // 用途: 执行 Advanced 级别的所有函数
-    // 好处: 异步处理复杂示例
-    // 与 OC 对比: OC 需 GCD 手动管理
     private func runAdvancedExamples() async {
         print("=== 泛型与协议示例 ===")
         let generics = AdvancedGenerics()
@@ -183,7 +174,7 @@ struct ContentView: View {
             }
             
             Button("高级示例") {
-                Task { //  这里开启异步上下文
+                Task {
                     await runAdvancedExamples()
                 }
             }
