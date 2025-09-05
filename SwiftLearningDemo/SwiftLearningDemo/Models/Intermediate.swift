@@ -187,6 +187,10 @@ struct Intermediate {
         struct Point {
             var x: Int
             var y: Int
+            // mutating: 允许修改结构体实例
+            // 用途: 支持值类型的可变性
+            // 好处: 避免不必要的复制
+            // 与 OC 对比: OC 类方法默认可变，无需 mutating
             mutating func moveBy(x: Int) { self.x += x }
         }
         
@@ -230,6 +234,30 @@ struct Intermediate {
         struct DefaultDescribable: Describable {}
         let defaultDesc = DefaultDescribable()
         print(defaultDesc.describe()) // 输出: Default description
+    }
+    
+    // MARK: - 下标 (Subscript)
+    // 展示下标语法，提供数组或字典-like 访问
+    // 用途: 自定义类型支持索引访问
+    // 好处: 提升可读性和使用体验
+    // 与 OC 对比: OC 无原生下标，需用 objectAtIndex: 或类似方法
+    struct CustomArray {
+        private var items = [Int]()
+        // subscript: 定义下标访问
+        subscript(index: Int) -> Int {
+            get { items[index] }
+            set { items[index] = newValue }
+        }
+        mutating func append(_ item: Int) { items.append(item) }
+    }
+    
+    func subscriptExample() {
+        var array = CustomArray()
+        array.append(10)
+        array.append(20)
+        print("下标访问: \(array[0])") // 输出: 10
+        array[0] = 30
+        print("修改后下标访问: \(array[0])") // 输出: 30
     }
 }
 

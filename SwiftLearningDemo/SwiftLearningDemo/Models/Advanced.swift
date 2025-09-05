@@ -29,9 +29,10 @@ struct Square: Drawable {
 
 // Container 协议示例
 protocol Container {
-    // associatedtype: 定义协议中的占位类型，具体类型由实现者指定
-    // 好处：提高协议的通用性，适配不同数据类型
-    // 与 OC 对比：OC 协议无法使用关联类型，需手动指定类型
+    // associatedtype: 定义协议中的占位类型
+    // 用途: 提高协议的通用性，适配不同数据类型
+    // 好处: 支持泛型协议设计
+    // 与 OC 对比: OC 协议无法使用关联类型，需手动指定类型
     associatedtype Item
     
     // mutating: 允许修改协议实现者的实例状态（通常用于结构体或枚举）

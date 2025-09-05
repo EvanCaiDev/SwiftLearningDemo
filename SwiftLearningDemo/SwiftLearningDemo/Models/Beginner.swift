@@ -167,4 +167,13 @@ struct Beginner {
         let value = input ?? "默认值"
         print("Nil 合并: \(value)")
     }
+    
+    // MARK: - 下划线 (_)
+    // 展示下划线 (_) 忽略外部参数名
+    // 用途: 简化函数调用，去掉不必要的参数标签
+    // 好处: 提高代码简洁性
+    // 与 OC 对比: OC 无此特性，需显式命名所有参数
+    func underscoreExample(_ number: Int) {
+        print("忽略参数名调用: \(number)") // 调用时可写 5，而非 number: 5
+    }
 }
